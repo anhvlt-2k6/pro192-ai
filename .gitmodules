@@ -1,6 +1,3 @@
-[submodule "hf-model"]
-	path = osg-ai
-	url = https://huggingface.co/anhvlt-2k6/osg-ai
 [submodule "llama.cpp"]
 	path = llama.cpp
 	url = https://github.com/ggerganov/llama.cpp
