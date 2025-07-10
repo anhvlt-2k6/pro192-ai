@@ -57,12 +57,12 @@ if __name__ == "__main__":
 
     training_args = TrainingArguments(
         per_device_train_batch_size=1,
-        gradient_accumulation_steps=16,
+        gradient_accumulation_steps=32,
         num_train_epochs=3,
         learning_rate=2e-4,
         fp16=True,
-        logging_steps=100,
-        save_steps=500,
+        logging_steps=1024,
+        save_steps=1024,
         output_dir=OUTPUT_DIR,
         save_total_limit=3,
     )

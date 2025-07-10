@@ -1,4 +1,4 @@
-name: osg-ai
+name: pro192-ai
 channels:
   - defaults
 dependencies:
@@ -284,4 +284,4 @@ dependencies:
       - xxhash==3.5.0
       - yarl==1.20.1
       - youtube-transcript-api==1.0.3
-prefix: /home/sh/.miniconda3/envs/osg-ai
+prefix: /home/sh/.miniconda3/envs/pro192-ai
