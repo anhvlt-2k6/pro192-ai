@@ -1,11 +1,11 @@
-# OSG AI
+# PRO192 AI
 
-Build OSG AI for class submission
+Build PRO192 AI for class submission
 
 Prerequisites:
 
 * Obtain the Operating system knowledge from the text books
-* Provide some knowledge to users about operating system of the class OSG
+* Provide some knowledge to users about operating system of the class PRO192
 * English is required. Vietnamese is optional.
 
 ## Requirements
@@ -25,10 +25,10 @@ Prerequisites:
 To pull all models, and submodules for tunning the LLM, using
 
 ```bash
-git clone https://github.com/anhvlt-2k6/osg-ai.git
-cd osg-ai 
+git clone https://github.com/anhvlt-2k6/pro192-ai.git
+cd pro192-ai 
 git submodule update --init --recursive
-cd osg-ai && git lfs fetch --all
+cd pro192-ai && git lfs fetch --all
 ```
 
 ### Prepare `conda` environment
@@ -43,7 +43,7 @@ conda env create -f .envs/anaconda-env-linux.yaml
 Then wait until the environment is ready. Once it's done, running
 
 ```bash
-conda activate osg-ai
+conda activate pro192-ai
 ```
 
 After that, prepare `docling` of the `conda` environment
@@ -77,21 +77,6 @@ Only CPU is available
 
 Then you should stop from doing the next step. In that case, review your Linux distro or WSL instance.
 
-#### Prepare documents for tunning
-
-For converting documents, `docconv.py` helps you to prepare the environment.
-
-To change to the directory where the path contains your documents, change the `ROOT` in the line 39. (Make sure the )
-
-```python
-39    ROOT = r"../../FPT_BIT_SE_RES/S2 - OSG202" # <- Change the directory
-```
-
-And then run it.
-
-```bash
-python3 docconv.py
-```
 
 ### Tunning the LLM
 
@@ -101,7 +86,7 @@ python3 train.py
 python3 convert.py
 ```
 
-The output model is in `./osg-ai/osg-ai.gguf`
+The output model is in `./pro192-ai/pro192-ai.gguf`
 
 ## License
 

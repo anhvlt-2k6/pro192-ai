@@ -4,11 +4,11 @@ import sys
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 
-BASE_MODEL_ID = "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+BASE_MODEL_ID = "HuggingFaceTB/SmolLM2-360M-Instruct"
 LORA_ADAPTER_PATH = "../.retoken"
 MERGED_OUTPUT_DIR = "../.tokenmapping"
 CONVERT_SCRIPT = "../llama.cpp/convert_hf_to_gguf.py"
-GGUF_OUTPUT = "../osg-ai/osg-ai.gguf"
+GGUF_OUTPUT = "../pro192-ai/pro192-ai.gguf"
 
 print("Loading base model and tokenizer...")
 base_model = AutoModelForCausalLM.from_pretrained(BASE_MODEL_ID)
