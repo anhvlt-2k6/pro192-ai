@@ -31,7 +31,7 @@ def prepare_dataset(md_folder: str, tokenizer, block_size: int = 1024):
 if __name__ == "__main__":
     MD_FOLDER = "../prepare-env/out"
     OUTPUT_DIR = "../.retoken"
-    MODEL_ID = "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+    MODEL_ID = "HuggingFaceTB/SmolLM2-360M-Instruct"
     DEVICE = "cuda"
 
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, use_fast=True)

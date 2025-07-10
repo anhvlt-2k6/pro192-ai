@@ -1,6 +1,6 @@
 from os import path, walk, makedirs, getcwd
 from sys import stderr
-from docling.document_converter import DocumentConverter
+from markitdown import MarkItDown
 
 EXTENSIONS = (
     '.pdf', '.docx', '.xlsx', '.pptx',
@@ -19,20 +19,12 @@ def find_documents(root_dir):
                 yield path.join(dirpath, fname)
 
 def export_to_out_path(full_path, out_name):
-    makedirs(OUT_DIR, exist_ok=True)
-
-    converter = DocumentConverter()
-    try:
-        result = converter.convert(full_path)
-        markdown = result.document.export_to_markdown()
-    except Exception as e:
-        print(f"Error converting '{full_path}': {e}", file=stderr)
-        return
-
+    md_engine = MarkItDown(docintel_endpoint="<document_intelligence_endpoint>")
+    result = md_engine.convert(full_path)
     out_path = path.join(OUT_DIR, f"{out_name}.md")
     print("Out_path:", out_path)
     with open(out_path, 'w', encoding='utf-8') as f:
-        f.write(markdown)
+        f.write(result.text_content)
     print(f"Written: {out_path}")
 
 if __name__ == "__main__":
