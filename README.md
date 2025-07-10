@@ -1,13 +1,5 @@
 # PRO192 AI
 
-Build PRO192 AI for class submission
-
-Prerequisites:
-
-* Obtain the Operating system knowledge from the text books
-* Provide some knowledge to users about operating system of the class PRO192
-* English is required. Vietnamese is optional.
-
 ## Requirements
 
 * An NVIDIA GPU with Studio driver installed and above version 550.
