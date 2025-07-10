@@ -206,7 +206,7 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-prepare-env/out/*
+prepare-env/out/*.md
 training-parse/md_dataset/*
 
 # Re-tokenize the LLM (not public, unnecessary)
