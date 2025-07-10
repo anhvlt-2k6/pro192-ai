@@ -36,7 +36,7 @@ def export_to_out_path(full_path, out_name):
     print(f"Written: {out_path}")
 
 if __name__ == "__main__":
-    ROOT = r"../../FPT_BIT_SE_RES/S2 - OSG202"
+    ROOT = r"../../FPT_BIT_SE_RES/S2 - OSG202" # <- Change the directory
 
     for full_path in find_documents(ROOT):
         rel = path.relpath(full_path, ROOT)
